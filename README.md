@@ -3,7 +3,7 @@
 Excel project that tracks U.S. public debt, highlights **yearly % changes**, summarizes **monthly historicals via PivotTable**, and includes a **FORECAST.ETS** projection. Built for clarity—no macros.
 
 ## File
-- `US_Debt_Tracker_Project_with_README.xlsx`
+- `US_Debt_Tracker_Project.xlsx`
 
 ## Features
 - **Monthly Historicals (PivotTable)** — Aggregated by calendar month (Values: *Average of Total Public Debt Outstanding*).

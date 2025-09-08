@@ -1,33 +1,40 @@
 # US Debt Tracker (Excel 2021)
 
-Excel project that tracks U.S. public debt, highlights **yearly % changes**, summarizes **monthly historicals via PivotTable**, and includes a **FORECAST.ETS** projection. Built for clarity—no macros.
+## Introduction
+This Excel project analyzes U.S. public debt through year-over-year changes, monthly historical patterns via a PivotTable, and an ETS-based projection. It’s built as a clean, portfolio-ready deliverable—no macros.
 
-## File
-- `US_Debt_Tracker_Project.xlsx`
+## Questions to Analyze
+- What was the **Yearly Debt Percentage Increase** for each year compared to the previous year?
+- Which **months historically** have seen the **highest/lowest increases** in Total debt?
+- What is the **projected growth of the publicly held debt** in the next few years?
 
-## Features
-- **Monthly Historicals (PivotTable)** — Aggregated by calendar month (Values: *Average of Total Public Debt Outstanding*).
-- **Yearly Percentage Changes** — Year-end totals and YoY% (last available date in Dec).
-- **Projected Growth** — Time-series projection with `FORECAST.ETS`.
-- **Ultimate Outputs** — Final answers summarized for easy consumption.
+## Excel Skills Used
+- **PivotTable** (Monthly Historicals): Rows = Month, Values = **Average of Total Public Debt Outstanding (TPDO)**
+- **Time series**: `FORECAST.ETS`, `EOMONTH`, `EDATE`
+- **Modern lookups / dynamic arrays**: `XLOOKUP`, `SEQUENCE`, `UNIQUE`, `SORT`, `FILTER` (where applicable)
+- **Charts**: line/column; number formatting for billions/trillions; freeze panes; clean layout
 
-## Requirements
-- Excel **2021** or **Microsoft 365** (uses dynamic arrays and ETS).
+## Overview of the Dataset
+- **Rows (series):** Debt Held by the Public · Intragovernmental Holdings · Total Public Debt Outstanding  
+- **Timeline (columns):** **Apr 1, 1993 → Feb 15, 2023** (7,495 daily dates)
 
-## How to Use
-1. Open the workbook and start with **Ultimate Outputs** (summary).
-2. Review **Monthly Historicals** (PivotTable) to see average TPDO by month.
-3. Check **Yearly Percentage Changes** for year-end totals and YoY%.
-4. See **Projected Growth** for ETS-based projection.
+## Analysis (Insights)
+- **Yearly:** year-end totals and YoY% highlight multi-year trend and acceleration/slowdown.
+- **Monthly Historicals (PivotTable):** average TPDO by calendar month surfaces seasonal highs/lows.
+- **Projection:** `FORECAST.ETS` provides an ETS-based short-term outlook; treat as illustrative (sensitive to gaps/outliers).
 
-## Refresh
-1. Append new rows in **Cleaned Data** (keep columns/headers).
-2. Ensure dates are real Excel dates (not text).
-3. Refresh the PivotTable (Data ▶ Refresh) if needed; other sheets spill automatically.
+## Visual Highlights
+![Year-end trend](images/chart-1.png)  
+*Figure 1 — Year-end TPDO trend / YoY context*
 
-## Notes
-- Monthly averages summarize levels and can mute intra-month volatility.
-- `FORECAST.ETS` assumes consistent intervals; inspect results around gaps/outliers.
+![Monthly averages (PivotTable)](images/chart-2.png)  
+*Figure 2 — Average TPDO by calendar month (PivotTable)*
+
+![ETS projection](images/chart-3.png)  
+*Figure 3 — `FORECAST.ETS` projection (illustrative)*
+
+## Conclusion
+As a data enthusiast and job seeker, I built this Excel-based analysis to uncover clear, reproducible insights about U.S. public debt—combining PivotTable monthly summaries, year-end comparisons, and an ETS forecast to communicate both history and an indicative outlook.
 
 ## License
 MIT
